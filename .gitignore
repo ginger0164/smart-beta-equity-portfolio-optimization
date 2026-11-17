@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+# raw CRSP / WRDS data is licensed and must not be committed
+raw_data/

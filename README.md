@@ -1,6 +1,5 @@
-# IDS586_Project_2026
+# Smart Beta Equity Portfolio Optimization
 
-**Smart Beta Equity Portfolio Optimization**  
 Final Project for IDS/Math 586 — Data Science and Decision Optimization in Banking and Finance  
 Duke University · Spring 2026
 
@@ -22,7 +21,7 @@ The central decision problem is: *At each monthly rebalancing date, how can we u
 ## 📁 Repository Structure
 
 ```
-IDS586_Project_2026/
+Smart-Beta-Equity-Portfolio-Optimization/
 │
 ├── Deliverables/
 │   ├── Documentation.pdf      # Final written report
@@ -41,9 +40,9 @@ IDS586_Project_2026/
 │
 ├── data/
 │   ├── ols_top6_by_month_post2022.csv   # OLS monthly top-6 stock selections
-│   ├── rf_top6_by_month_post2022.csv    # RF monthly top-6 stock selections
-│   └── mvo_monthly_returns.csv          # Backtest monthly realized returns (2022–2025)
+│   └── rf_top6_by_month_post2022.csv    # RF monthly top-6 stock selections
 │
+├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
@@ -126,7 +125,7 @@ All metrics are computed **out-of-sample** on the post-2022 period.
 ### Requirements
 
 ```bash
-pip install pandas numpy scikit-learn scipy matplotlib jupyter
+pip install -r requirements.txt
 ```
 
 ### Run Order
@@ -135,7 +134,7 @@ pip install pandas numpy scikit-learn scipy matplotlib jupyter
 1. data_process/Clean_2.ipynb       → generates cleaned panel dataset
 2. Modeling/new_OLS.ipynb           → generates ols_top6_by_month_post2022.csv
 3. Modeling/RandomForest.ipynb      → generates rf_top6_by_month_post2022.csv
-4. MVO/new_MVO.ipynb                → runs MVO optimization, outputs mvo_monthly_returns.csv
+4. MVO/new_MVO.ipynb                → runs MVO optimization and the out-of-sample backtest
 5. MVO/measurement.ipynb            → computes performance metrics & generates evaluation plots
 ```
 
@@ -145,7 +144,6 @@ pip install pandas numpy scikit-learn scipy matplotlib jupyter
 
 ## 👥 Team Members
 
-<!-- Add team member names here -->
 - Ginger Gao · Duke University
 - Jade Cheng · Duke University
 - Tea Tafaj · Duke University
